@@ -159,7 +159,7 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 //code seems good but not getting any output.
 const fizzbuzz = arr => {
-  // Solution code here...
+//   // Solution code here...
   let fizzOutput = [];
 
   arr.forEach(num=>{
@@ -181,7 +181,7 @@ const fizzbuzz = arr => {
   return fizzOutput;
 };
 
-
+//all tests are paasing
 /* ------------------------------------------------------------------------------------------------
 TESTS
 
@@ -253,7 +253,7 @@ describe('Testing challenge 6', () => {
   })
 })
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   const inputs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
   test('It should print out messages or numbers', () => {
@@ -277,4 +277,5 @@ xdescribe('Testing challenge 7', () => {
     ])
     expect(fizzbuzz(inputs).length).toStrictEqual(16)
   })
-})
+});
+
