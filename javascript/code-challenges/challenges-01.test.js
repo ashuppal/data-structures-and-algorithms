@@ -157,7 +157,7 @@ Iterate over the array using forEach to determine the output based on several ru
 
 Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
-
+//code seems good but not getting any output.
 const fizzbuzz = arr => {
   // Solution code here...
   let fizzOutput = [];
@@ -177,8 +177,10 @@ const fizzbuzz = arr => {
     }
   });
 
+
   return fizzOutput;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
