@@ -178,6 +178,7 @@ const snorlaxAbilities = {
 
 const extractAbilities = arr => {
   // Solution code here...
+  
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -226,6 +227,7 @@ const snorlaxStats = {
 const extractStats = arr => {
   // Solution code here...
 }
+
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
