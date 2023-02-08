@@ -139,15 +139,13 @@ Here is an example of the input:
 
 This data could be sorted by name or price.
 ------------------------------------------------------------------------------------------------ */
-
+//This data could be sorted by name or price.
 const sortBy = (property, arr) => {
   // Solution code here...
-  let newArr = [];
-  for (let i = 0; i < arr.length; i++) {
-    newArr.push(arr[i][property]);
-  }
-  newArr.sort((a, b) => a - b);
-  return newArr;
+  arr.sort((a, b) =>
+    (a[property] < b[property]) ? -1 : 1
+  );
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------

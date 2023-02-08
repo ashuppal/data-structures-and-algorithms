@@ -110,9 +110,14 @@ Here is an example of the input:
 ------------------------------------------------------------------------------------------------ */
 
 const sortByPrice = arr => {
+  
   // Solution code here...
-  return arr.sort((a,b)=> (a.price) -(b.price))
-}
+  return arr.sort((a,b) => {
+    return a.price - b.price;
+  });
+
+
+};
 
 
 /* ------------------------------------------------------------------------------------------------
