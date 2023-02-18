@@ -1,5 +1,6 @@
 #### singly linked list
 
+Author: Ashwini Uppal
 
 #### challenge
 
