@@ -54,7 +54,9 @@ class SinglyLinkedList {
     return string;
   }
 
+//double linked list - stretch goal
 }
+
 
 
 
