@@ -19,11 +19,13 @@ class SinglyLinkedList {
     let newNode = new Node(val);
 
     if(!this.head){
+      //if there is no head, then the new node is the head.
       this.head = newNode;
       this.tail = this.head;
     }
     else{
-      this.head.next = newNode;
+      //if there is a head, then the new node is the new tail
+      this.tail.next = newNode;
       this.tail = newNode;
     }
     this.length++;
@@ -53,7 +55,6 @@ class SinglyLinkedList {
   }
 
 }
-
 
 
 
