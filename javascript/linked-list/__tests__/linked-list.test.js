@@ -21,14 +21,15 @@ it('should insert multiple nodes into the linked list', () => {
   const linked = new LinkedList();
   linked.insert('apple');
   linked.insert('banana');
+  linked.insert('carrot');
 
 
   console.log(linked.tail.val);
   expect(linked.head.val).toEqual('apple');
   expect(linked.head.next.val).toEqual('banana');
-  expect(linked.head.next.next).toBeNull();
+  expect(linked.head.next.next.next).toBeNull();
 
-  expect(linked.length).toEqual(2);
+  expect(linked.length).toEqual(3);
 });
 
 
@@ -36,10 +37,10 @@ it('should return true if value is found in linked list', () => {
   const linked = new LinkedList();
   linked.insert('apple');
   linked.insert('banana');
-  // linked.insert('carrot');
+  linked.insert('carrot');
   expect(linked.includes('apple')).toEqual(true);
   expect(linked.includes('banana')).toEqual(true);
-  //expect(linked.includes('carrot')).toEqual(true);
+  expect(linked.includes('carrot')).toEqual(true);
   expect(linked.includes('chicken')).toEqual(false);
 });
 
