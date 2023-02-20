@@ -49,4 +49,4 @@ Method: insertAfter()
 
 
 
-[Whiteboard for linked-list-insertions](../linked-list/assets/whiteboard.png)
+[Whiteboard for linked-list-insertions](../linked-list/assets/linked-list-insertions.png)
