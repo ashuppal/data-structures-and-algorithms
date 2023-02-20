@@ -14,16 +14,14 @@ class SinglyLinkedList {
     this.length = 0;
   }
 
-  insert(val){
+  insert (val) {
+    let newNode = new Node (val);
 
-    let newNode = new Node(val);
-
-    if(!this.head){
+    if (!this.head) {
       //if there is no head, then the new node is the head.
       this.head = newNode;
       this.tail = this.head;
-    }
-    else{
+    } else {
       //if there is a head, then the new node is the new tail
       this.tail.next = newNode;
       this.tail = newNode;
@@ -32,21 +30,19 @@ class SinglyLinkedList {
     return this;
   }
 
-
-  includes(val){
+  includes (val) {
     let current = this.head;
-    while(current){
-      if(current.val === val) return true;
+    while (current) {
+      if (current.val === val) return true;
       current = current.next;
     }
     return false;
   }
 
-  toString(){
-
+  toString () {
     let current = this.head;
     let string = '';
-    while(current){
+    while (current) {
       string += `{${current.val}} -> `;
       current = current.next;
     }
@@ -54,20 +50,61 @@ class SinglyLinkedList {
     return string;
   }
 
-//double linked list - stretch goal
+
+  append (val) {
+    let newNode = new Node (val);
+    if (!this.head) {
+      this.head = newNode;
+      this.tail = this.head;
+    } else {
+      this.tail.next = newNode;
+      this.tail = newNode;
+    }
+    this.length++;
+    return this;
+  }
+
+  insertBefore (val, newVal) {
+    let newNode = new Node (newVal);
+    let current = this.head;
+    if (val === this.head.val) {
+      newNode.next = this.head;
+      this.head = newNode;
+      this.length++;
+      return this;
+    }
+    while (current.next) {
+      if (current.next.val === val) {
+        newNode.next = current.next;
+        current.next = newNode;
+        this.length++;
+        return this;
+      }
+      current = current.next;
+    }
+    return 'Value not found';
+  }
+
+  insertAfter (val, newVal) {
+    let newNode = new Node (newVal);
+    let current = this.head;
+    while (current) {
+      if (current.val === val) {
+        newNode.next = current.next;
+        current.next = newNode;
+        this.length++;
+        return this;
+      }
+      current = current.next;
+    }
+    return 'Value not found';
+  }
 }
 
-
-
-
+let list = new SinglyLinkedList ();
+list.append (1);
+list.insertAfter (1, 2);
+list.insertBefore (2, 4);
+console.log (list.toString ());
 
 module.exports = SinglyLinkedList;
-
-
-
-
-
-
-
-
-
