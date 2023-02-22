@@ -50,3 +50,32 @@ Method: insertAfter()
 
 
 [Whiteboard for linked-list-insertions](../linked-list/assets/linked-list-insertions.png)
+
+
+####code challenge 07
+
+## problem domain
+Write the following method for the Linked List class:
+kth from end
+argument: a number, k, as a parameter.
+Return the node’s value that is k places from the tail of the linked list.
+You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
+
+I worked with Adrienne for this code challenge
+
+method: kthFromEnd(k)
+We implemented the following steps:
+Create a method kthFromEnd with one parameter
+If the value of k is less than 0 then throw an error.
+if the value of k is bigger than the length of the list.
+declare a varible "current" and assign it the value of head
+use while loop to find the length of the linked list
+create a variable "result" and assign it a value of (total length of the linked list - kth value - 1)
+while the result is not equal to zero, move the current and decrease the result by 1
+return the current 
+
+![Whiteboard](./assets/kth.png)
+
+
+
+ 
