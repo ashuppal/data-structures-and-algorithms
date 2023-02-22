@@ -99,12 +99,33 @@ class SinglyLinkedList {
     }
     return 'Value not found';
   }
+
+  kthFromEnd (k) {
+    if (k === null || k < 0) {
+      throw new Error ('You did not insert  k value or k is negative value');
+    }
+
+    let current = this.head;
+    let size = 0;
+    while (current !== null) {
+      current = current.next;
+      size++;
+    }
+
+    if (k > size - 1) {
+      throw new Error ('k value is greater than the list size');
+    }
+    let value = size - k - 1;
+    current = this.head;
+    while (value !== 0) {
+      current = current.next;
+      value--;
+    }
+    return current;
+  }
+
+
 }
 
-let list = new SinglyLinkedList ();
-list.append (1);
-list.insertAfter (1, 2);
-list.insertBefore (2, 4);
-console.log (list.toString ());
 
 module.exports = SinglyLinkedList;
