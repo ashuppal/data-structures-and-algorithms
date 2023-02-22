@@ -94,9 +94,42 @@ it('should insert after a node after the first node', () => {
 });
 
 
+it('k is greater than the length of the linked list',() => {
 
+  let linkedList = new LinkedList();
+  linkedList.insert(1);
+  linkedList.insert(2);
+  linkedList.insert(3);
+  function x(){
+    linkedList.kthFromEnd(4);
+  }
+  expect(x).toThrow();
+});
 
+it('k and the length of the list are the same',() => {
 
+  let linkedList = new LinkedList();
 
+  linkedList.insert(1);
+  linkedList.insert(2);
+  linkedList.insert(3);
+  function x(){
+    linkedList.kthFromEnd(3);
+  }
 
+  expect(x).toThrow();
+});
 
+it('k is not a positive integer',() => {
+
+  let linkedList = new LinkedList();
+
+  linkedList.insert(1);
+  linkedList.insert(2);
+  linkedList.insert(3);
+  function x(){
+    linkedList.kthFromEnd(-1);
+  }
+
+  expect(x).toThrow('You did not insert  k value or k is negative value');
+});
