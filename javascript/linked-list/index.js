@@ -124,8 +124,36 @@ class SinglyLinkedList {
     return current;
   }
 
+  zipLists (list1, list2) {
+    let current1 = list1.head;
+    let current2 = list2.head;
+    let newList = new SinglyLinkedList ();
+    while (current1 || current2) {
+      if (current1) {
+        newList.append (current1.val);
+        current1 = current1.next;
+      }
+      if (current2) {
+        newList.append (current2.val);
+        current2 = current2.next;
+      }
+    }
+    return newList;
+  }
+
 
 }
+let list1 = new SinglyLinkedList ();
+list1.append (1);
+list1.append (3);
+list1.append (2);
 
+let list2 = new SinglyLinkedList ();
+list2.append (5);
+
+
+console.log (list2.zipLists (list1, list2));
 
 module.exports = SinglyLinkedList;
+
+
