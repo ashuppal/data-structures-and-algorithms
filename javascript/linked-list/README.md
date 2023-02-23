@@ -78,4 +78,33 @@ return the current
 
 
 
- 
+ ### code challenge 08
+
+## problem domain
+Write the following method for the Linked List class:
+zipLists
+Arguments: 2 linked lists
+Return: Linked List, zipped as noted below
+
+I worked with Brenda and Eli for this code challenge. 
+
+## method: zipLists(list1, list2)
+We implemented the following steps:
+Create a method zipLists with two parameters
+Create a new linked list
+Create a variable "current1" and assign it the value of list1.head
+Create a variable "current2" and assign it the value of list2.head
+while current1 is not null and current2 is not null
+    append the current1 value to the new linked list
+    append the current2 value to the new linked list
+    move the current1 to the next node
+    move the current2 to the next node
+if current1 is not null
+    append the current1 value to the new linked list
+    move the current1 to the next node
+if current2 is not null
+    append the current2 value to the new linked list
+    move the current2 to the next node
+return the new linked list
+
+![Whiteboard](./assets/linked-list-zip.png)
