@@ -1,6 +1,10 @@
 'use strict';
 const LinkedList = require ('../index');
 
+
+
+
+
 describe ('Linked List', () => {
   it ('should instantiate an empty linked list', () => {
     const linked = new LinkedList ();
@@ -150,3 +154,4 @@ it ('zip two linked lists together', () => {
     '{1} -> {5} -> {3} -> {9} -> {2} -> {4} -> NULL'
   );
 });
+

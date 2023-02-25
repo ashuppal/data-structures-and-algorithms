@@ -50,7 +50,6 @@ class SinglyLinkedList {
     return string;
   }
 
-
   append (val) {
     let newNode = new Node (val);
     if (!this.head) {
@@ -141,19 +140,67 @@ class SinglyLinkedList {
     return newList;
   }
 
+  reverse () {
+    let current = this.head;
+    let previous = null;
+    let next = null;
+    while (current) {
+      next = current.next;
+      current.next = previous;
+      previous = current;
+      current = next;
+    }
+    this.head = previous;
+    return this;
+  }
+  
 
+  //write pallidrome without using inbuilt methods
+  isPalindrome () {
+    let current = this.head;
+    let arr = [];
+    while (current) {
+      arr.push (current.val);
+      current = current.next;
+    }
+    let reverseArr = [];
+    for (let i = arr.length - 1; i >= 0; i--) {
+      reverseArr.push (arr[i]);
+    }
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] !== reverseArr[i]) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  isPalindrome2(){
+    //use the reverse method above to reverse the list and compare it to the original list
+    let current = this.head;
+    let arr = [];
+    while (current) {
+      arr.push (current.val);
+      current = current.next;
+    }
+    let reverseList = this.reverse();
+    let current2 = reverseList.head;
+    let arr2 = [];
+    while (current2) {
+      arr2.push (current2.val);
+      current2 = current2.next;
+    }
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] !== arr2[i]) {
+        return false;
+      }
+    }
+    return true;
+
+
+   
+  }
 }
-let list1 = new SinglyLinkedList ();
-list1.append (1);
-list1.append (3);
-list1.append (2);
-
-let list2 = new SinglyLinkedList ();
-list2.append (5);
-
-
-console.log (list2.zipLists (list1, list2));
 
 module.exports = SinglyLinkedList;
-
 
