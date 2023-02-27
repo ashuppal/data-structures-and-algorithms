@@ -7,7 +7,7 @@ describe ('Stack', () => {
     const stack = new Stack ();
     expect (stack.top).toBeNull ();
   });
-}
+});
 
 it ('should push a node onto the stack', () => {
   const stack = new Stack ();
