@@ -39,7 +39,7 @@ class PseudoQueue {
     let dequeued = this.front;
     this.front = this.front.next;
     return dequeued.val;
-  
+
   }
 
   toString () {
