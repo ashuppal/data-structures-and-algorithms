@@ -14,6 +14,8 @@ Define a method for each of the depth first traversals:
 pre order
 in order
 post order
+find the maximum value
+
 Each depth first traversal method should return an array of values, ordered appropriately.
 Binary Search Tree
 Create a Binary Search Tree class
@@ -25,6 +27,8 @@ Adds a new node with that value in the correct location in the binary search tre
 Contains
 Argument: value
 Returns: boolean indicating whether or not the value is in the tree at least once.
+
+
 
 
 ## Approach & Efficiency
@@ -55,5 +59,7 @@ inOrder()
 postOrder()
 add()
 contains()
+findMaximumValue()
 
-
+##whiteboard
+![whiteboard](./assets/whiteboarding.png) 

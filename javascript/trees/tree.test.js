@@ -66,4 +66,9 @@ describe('Binary Search Trees', () => {
 
   });
 
+  it('should successfully return the maximum value in the tree', () => {
+    expect(bstree.findMaximumValue()).toEqual(17);
+
+  });
+
 });
