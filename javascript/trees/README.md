@@ -62,6 +62,26 @@ alogrithm:
 8. return the list
 big O: O(n) time and O(n) space
 
+fizzBuzzTree
+1. create a new tree
+2. create a queue
+3. enqueue the root
+4. while the queue is not empty
+5. dequeue the front node
+6. if the front node's value is divisible by 3 and 5
+7. add fizzbuzz to the new tree
+8. else if the front node's value is divisible by 3
+9. add fizz to the new tree
+10. else if the front node's value is divisible by 5
+11. add buzz to the new tree
+12. else add the front node's value to the new tree
+13. enqueue the front node's children
+14. return the new tree
+big O: O(n) time and O(n) space
+
+
+
+
 
 ## API
 <!-- Description of each method publicly available in each of your trees -->
@@ -72,9 +92,14 @@ add()
 contains()
 findMaximumValue()
 findBreadthFirst()
+fizzBuzzTree()
 
 
 ##whiteboard
 ![whiteboard](./assets/whiteboarding.png) 
 
 ![whiteboard](./assets/breadthFirst.png)
+
+We worked together as a team on this challenge(Steve, Brenda, Tyler, and I)
+
+![whiteboard](./assets/challenge-19.png)
