@@ -114,7 +114,7 @@ class BinarySearchTree extends Tree {
 
   findMaximumValue(){
 
-    if (this.root===null) throw new Error ('you do not  have a tree');
+    if (this.root===null) throw new Error ('you do not have a tree');
     let number=0;
 
     const traverse=(node)=>{
@@ -132,6 +132,24 @@ class BinarySearchTree extends Tree {
     };
     traverse(this.root);
     return number;
+  }
+
+  findBreadthFirst(){
+    if(this.root===null) throw new Error ('you do not have a tree');
+    let queue=[];
+    let results=[];
+    queue.push(this.root);
+    while(queue.length){
+      let current=queue.shift();
+      results.push(current.value);
+      if(current.left){
+        queue.push(current.left);
+      }
+      if(current.right){
+        queue.push(current.right);
+      }
+    }
+    return results;
   }
 }
 
@@ -159,7 +177,10 @@ binarySearchTree.add(2);
 // console.log('contains', binarySearchTree.contains(3));
 // console.log('contains', binarySearchTree.contains(8));
 
+
 console.log(binarySearchTree.findMaximumValue());
+
+console.log(binarySearchTree.findBreadthFirst());
 
 
 module.exports = { Tree, Node, BinarySearchTree};

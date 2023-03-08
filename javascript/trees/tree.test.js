@@ -71,4 +71,13 @@ describe('Binary Search Trees', () => {
 
   });
 
+  it('should successfully return the breadth first traversal of the tree', () => {
+    expect(bstree.findBreadthFirst()).toEqual([10, 5, 15, 1, 8, 17]);
+
+  }
+  );
+  
+
 });
+
+

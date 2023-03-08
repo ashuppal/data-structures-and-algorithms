@@ -50,6 +50,17 @@ Adds a new node with that value in the correct location in the binary search tre
 Contains
 Argument: value
 Returns: boolean indicating whether or not the value is in the tree at least once.
+findBreadthFirst
+alogrithm:
+1. create a queue
+2. create a list
+3. enqueue the root
+4. while the queue is not empty
+5. dequeue the front node
+6. add the front node to the list
+7. enqueue the front node's children
+8. return the list
+big O: O(n) time and O(n) space
 
 
 ## API
@@ -60,6 +71,10 @@ postOrder()
 add()
 contains()
 findMaximumValue()
+findBreadthFirst()
+
 
 ##whiteboard
 ![whiteboard](./assets/whiteboarding.png) 
+
+![whiteboard](./assets/breadthFirst.png)
