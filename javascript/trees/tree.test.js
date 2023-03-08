@@ -12,6 +12,16 @@ describe('Trees', () => {
   tree.root.left.right = new Node(8);
   tree.root.right.right = new Node(17);
 
+  BinarySearchTree.add(10);
+  BinarySearchTree.add(15);
+  BinarySearchTree.add(5);
+  BinarySearchTree.add(1);
+  BinarySearchTree.add(8);
+  BinarySearchTree.add(17);
+
+
+
+
   it('can be created as expected', () => {
 
     expect(tree.root.value).toEqual(10);
@@ -77,7 +87,18 @@ describe('Binary Search Trees', () => {
   }
   );
   
+  it('fizzbuzz tree', () => {
+    let tree = new Tree();
+    tree.add(10);
+    tree.add(5);
+    tree.add(15);
+    tree.add(1);
+    tree.add(8);
 
+    let newTree = tree.fizzBuzzTree(tree);
+    expect(newTree).toEqual(['Buzz','Buzz','FizzBuzz','1','8']);
+  
+
+  });
 });
-
 
