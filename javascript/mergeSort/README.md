@@ -7,3 +7,6 @@ For detailed explanation, please refer to my blog
 
 [link to my blog](./blog.md)
 
+[link to my solution](./mergeSort.js)
+
+
