@@ -35,4 +35,21 @@ describe ('Sorters', () => {
       'Valkyrie',
     ]);
   });
+
+  it ('can sort movies by title ignoring words specified', () => {
+    const movies = sortTitle (Movies);
+    expect (movies.map (m => m.title)).toEqual ([
+      'Beetlejuice',
+      'City of God',
+      'The Cotton Club',
+      'Crocodile Dundee',
+      'The Intouchables',
+      'Memento',
+      'Ratatouille',
+      'The Shawshank Redemption',
+      'Stardust',
+      'Valkyrie',
+    ]);
+  }
+  );
 });
