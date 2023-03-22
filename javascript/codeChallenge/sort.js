@@ -51,7 +51,8 @@ function compareTitle(a,b) {
   }
   return 0;
 }
-console.log(compareTitle({title: 'The Hobbit'}, {title: 'American Beauty'}));
+
+//console.log(compareTitle({title: 'The Hobbit'}, {title: 'American Beauty'}));
 
 
 
