@@ -30,5 +30,10 @@ describe('Hash Table', () => {
     expect(newTable.has('name')).toBeTruthy();
   }
   );
+  it('Successfully returns null for a key that does not exist in the hashtable', () => {
+    newTable.add('name', 'ash');
+    expect(newTable.get('name')).toBeTruthy();
+  }
+  );
 });
 
