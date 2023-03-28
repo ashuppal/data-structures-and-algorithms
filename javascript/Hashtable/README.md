@@ -28,3 +28,6 @@ Successfully returns a list of all unique keys that exist in the hashtable
 Successfully handle a collision within the hashtable
 Successfully retrieve a value from a bucket within the hashtable that has a collision
 Successfully hash a key to an in-range value
+
+
+![Whiteboard](./assets/Screen%20Shot%202023-03-28%20at%2012.00.15%20AM.png)
