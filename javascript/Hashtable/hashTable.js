@@ -17,13 +17,6 @@ class HashTable {
   }
 
   has (key) {
-    // let hash = this.hash (key);
-    // if (!this.buckets[hash]) return false;
-    // for (let i = 0; i < this.buckets[hash].length; i++) {
-    //   let bucket = this.buckets[hash][i];
-    //   if (bucket[key]) return true;
-    // }
-    // return false;
     let hash = this.hash (key);
     return this.buckets[hash] ? true : false;
   }
@@ -75,21 +68,6 @@ class HashTable {
 }
 
 
-const table = new HashTable (1024);
-
-const hashOne = table.hash ('Ash');
-
-console.log (hashOne);
-
-table.add ('Ash', 'Ash');
-table.add('Sid', 'Sid');
-
-table.get('Ash');
-// table.set('Ash', 'she/her');
-
-
-console.log (table.buckets);
-console.log(table.has('Ash'));
 
 
 module.exports = HashTable;
