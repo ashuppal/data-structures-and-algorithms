@@ -68,8 +68,20 @@ class HashTable {
 }
 
 
+function leftJoin(table1, table2) {
+  let result = [];
+
+  for (let key of table1.keys()) {
+    let value1 = table1.get(key);
+    let value2 = table2.get(key) || null;
+    result.push([key, value1, value2]);
+  }
+
+  return result;
+}
 
 
-module.exports = HashTable;
+
+module.exports = {HashTable, leftJoin};
 
 
