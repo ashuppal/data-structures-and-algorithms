@@ -31,3 +31,6 @@ Successfully hash a key to an in-range value
 
 
 ![Whiteboard](./assets/Screen%20Shot%202023-03-28%20at%2012.00.15%20AM.png)
+
+![Whiteboard](./assets/lab33.png)
+
