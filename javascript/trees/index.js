@@ -230,6 +230,16 @@ binarySearchTree.add(8);
 let newTree = tree.fizzBuzzTree(tree);
 console.log(newTree);
 
+// Find the sum of all the values in a binary tree
+
+// const sum = (node) => {
+//   if (!node) return 0;
+//   return node.value + sum(node.left) + sum(node.right);
+// };
+
+
+
+// console.log(sum(tree.root));
 // console.log('preOrder', tree.preOrder());
 // console.log('inOrder', tree.inOrder());
 
