@@ -44,6 +44,10 @@ class Graph{
 
 
 
+
+
+
+
   breadthFirst(root, callback){
     const queue = [root];
     const visited = new Set();
@@ -53,7 +57,6 @@ class Graph{
     while(queue.length){
       current = queue.pop();
 
-     
       if(callback) callback(current.value);
 
 
@@ -65,7 +68,6 @@ class Graph{
         }
       }
     }
-  
     return visited;
   }
 
