@@ -98,6 +98,34 @@ class Graph{
   }
 
 
+
+
+  businessTrip(graph, cities){
+    let cost = 0;
+    let result = true;
+    for(let i = 0; i < cities.length - 1; i++){
+      let neighbors = graph.getNeighbors(cities[i]);
+      let found = false;
+      for(let j = 0; j < neighbors.length; j++){
+        if(neighbors[j].vertex.value === cities[i + 1].value){
+          cost += neighbors[j].weight;
+          found = true;
+          break;
+        }
+      }
+      if(!found){
+        result = false;
+        break;
+      }
+    }
+    if(result){
+      return `True, $${cost}`;
+    } else {
+      return 'False, $0';
+    }
+  }
+
+
 }
 
 module.exports = { Graph, Vertex, Edge };

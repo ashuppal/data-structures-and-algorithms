@@ -35,7 +35,11 @@ Arguments: node
 Returns a collection of nodes in the order they were visited
 Display the collection
 
+7. Business Challenge
+Arguments: graph, array of city names
+Return: the cost of the trip (if it’s possible) or null (if not)
 
 ![Whiteboard](./assets/whiteboarding.png)
+![Whiteboard](./assets/code37.png)
 
 
