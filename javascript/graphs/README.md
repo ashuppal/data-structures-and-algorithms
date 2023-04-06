@@ -41,5 +41,6 @@ Return: the cost of the trip (if it’s possible) or null (if not)
 
 ![Whiteboard](./assets/whiteboarding.png)
 ![Whiteboard](./assets/code37.png)
+![Whiteboard](./assets/code38.png)
 
 

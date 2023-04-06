@@ -2,8 +2,7 @@
 
 const { Graph, Edge} = require('../graphs/graphs.js');
 
-
-describe('Graphs', () => {
+describe('Graph', () => {
   it('Can successfully add a node to the graph', () => {
     const graph = new Graph();
     const vertex = graph.addVertex('A');
