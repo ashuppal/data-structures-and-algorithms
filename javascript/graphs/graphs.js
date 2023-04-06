@@ -125,8 +125,36 @@ class Graph{
     }
   }
 
+  /**Problem domain:
+
+Write the following method for the Graph class:
+
+Name: Depth first
+Arguments: Node (Starting point of search)
+Return: A collection of nodes in their pre-order depth-first traversal order
+Program output: Display the collection
+ */
+
+
+
+  depthFirst1(node){
+    let visited = new Set();
+    let output = [];
+    output.push(node.value);
+    visited.add(node);
+    let neighbors = this.getNeighbors(node);
+    for(let i = 0; i < neighbors.length; i++){
+      if(!visited.has(neighbors[i].vertex)){
+        output = output.concat(this.depthFirst1(neighbors[i].vertex));
+      }
+    }
+    return output;
+  }
+
 
 }
+
+
 
 module.exports = { Graph, Vertex, Edge };
 
@@ -156,3 +184,8 @@ console.log('-----------------');
 graph.depthFirst(A, console.log);
 console.log('-----------------');
 console.log(graph.size());
+
+console.log('-----------------');
+
+console.log(graph.depthFirst1(A)); //output: [ 'A', 'B', 'G', 'D', 'F', 'E', 'H', 'C' ]
+
